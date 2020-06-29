@@ -9,6 +9,7 @@ function App() {
         <main>
             <Pokemon />
             <Title content="Some Simple Title" />
+            <App.css />
           </main>
     </div>
   );
