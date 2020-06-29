@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Title from './components/Title'
 
 function App() {
   return (
@@ -10,6 +11,9 @@ function App() {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
+          <main>
+            <Title content="Some Simple Title" />
+          </main>
           <a
             className="App-link"
             href="https://reactjs.org"
@@ -19,6 +23,7 @@ function App() {
             Good Morning!
           </a>
         </header>
+        
     </div>
   );
 }
