@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 import Title from './components/Title'
-import Pokemon from './components/Pokemon'
+import Pokemon from './components/Pokemon/Pokemon'
 
 const all_pokemon = [
   {
@@ -36,15 +36,23 @@ const all_pokemon = [
 ];
 
 function App() {
-  const pokemons = all_pokemon.map(pokemon => <Pokemon info={pokemon}/>)
-  console.log(info)
   return (
-    <div className="App">
-      <main>
-        <Title content="Some Simple Title" />
-        {pokemons}
-      </main>
-    </div>
+    <main className="container">
+      <Title content="Some Simple Title" />
+      <div className="row">
+        {all_pokemon.map(pokemon =>
+          <div className="col-md-6 col-lg-4"> 
+            <Pokemon 
+              name={pokemon.name} 
+              weight={pokemon.weight}
+              awesome={pokemon.awesome} 
+              terrifying={pokemon.terrifying}
+              abilities={pokemon.abilities}
+            />
+          </div>
+        )}
+      </div>
+    </main>
   );
 }
 
