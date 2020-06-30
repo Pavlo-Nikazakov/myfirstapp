@@ -36,7 +36,8 @@ const all_pokemon = [
 ];
 
 function App() {
-  const pokemons = all_pokemon.map(pokemon => <Pokemon data={pokemon}/>)
+  const pokemons = all_pokemon.map(pokemon => <Pokemon info={pokemon}/>)
+  console.log(info)
   return (
     <div className="App">
       <main>
